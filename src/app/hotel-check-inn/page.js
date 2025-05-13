@@ -9,7 +9,7 @@ import cozyCabin3 from "../../../public/images/cozy-cabin3.jpeg";
 import cozyCabin4 from "../../../public/images/cozy-cabin4.jpg";
 import Image from 'next/image';
 import { FiWifi, FiX } from "react-icons/fi";
-import { MdPool, MdFreeBreakfast, MdDinnerDining, MdNaturePeople, MdEco, MdLocationOn, MdWash, MdLocalHospital } from "react-icons/md";
+import { MdPool, MdFreeBreakfast, MdDinnerDining, MdNaturePeople, MdEco, MdLocationOn, MdWash, MdLocalHospital, MdTv, MdOutlineBathroom } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaParking, FaConciergeBell, FaHandsHelping, FaTag, FaBed, FaStar, FaHeart, FaLeaf, FaLightbulb } from "react-icons/fa"
 
@@ -56,57 +56,51 @@ const HotelCheckInn = () => {
         },
         {
           name: "Flat Screen TV's",
-          icon: <MdNaturePeople size={30} className="text-primary mb-2" />,
+          icon: <MdTv size={30} className="text-primary mb-2" />,
+        },
+        {
+          name: "Attached Bathroom",
+          icon: <MdOutlineBathroom size={30} className="text-primary mb-2" />,
         },
       ];
     
     const roomType = [
        {
-        name: "Premium AC",
+        name: "Premium Single, Double",
         img: cozyCabin2,
         type: "premium",
         bed: "Comfortable Bed with Balcony View",
-        availability: 9,
-        price: "2200/ + 12% GST",
+        availability: 10,
+        price: "2300/ + GST",
         description: "Enjoy peaceful moments by the fire in this cozy cabin ideal for romantic getaways."
       },
       {
-        name: "Deluxe AC",
+        name: "Deluxe",
         img: cozyCabin1,
         type: "deluxe",
         bed: "Comfortable Bed with Balcony View",
-        availability: 4,
-        price: "2000/ + 12% GST",
+        availability: 10,
+        price: "1500/ + GST",
         description: "A luxurious escape nestled in the forest, featuring a balcony with breathtaking views."
       },
       {
-        name: "Non AC",
+        name: "Executive",
         img: cozyCabin3,
-        type: "nonac",
+        type: "executive",
         bed: "Comfortable Bed with Balcony View",
-        availability: 2,
-        price: "1200/ + 12% GST",
+        availability: 6,
+        price: "1900/ + GST",
         description: "Enjoy peaceful moments by the fire in this cozy cabin ideal for romantic getaways."
-      },
-      {
-        name: "Dormitory",
-        img: cozyCabin4,
-        type: "dormitory",
-        bed: "Comfortable Bed with Balcony View",
-        availability: 7,
-        price: "500/ + 12% GST",
-        description: "Enjoy peaceful moments by the fire in this cozy cabin ideal for romantic getaways."
-      },
+      }
     ];
    
   const filteredRooms = activeTab === "all" ? roomType : roomType.filter(room => room.type === activeTab);
 
   const tabs = [
     { label: "All", value: "all" },
-    { label: "Premium AC", value: "premium" },
-    { label: "Deluxe Ac", value: "deluxe" },
-    { label: "Non-AC", value: "nonac" },
-    { label: "Dormitory", value: "dormitory" },  
+    { label: "Premium", value: "premium" },
+    { label: "Deluxe", value: "deluxe" },
+    { label: "Executive", value: "executive" },
   ];
     const fadeIn = {
     hidden: { opacity: 0 },
@@ -189,7 +183,9 @@ const HotelCheckInn = () => {
           <div className="w-full">
             <h1 className="text-4xl lg:text-4xl font-bold">welcome to <span className="text-green-700">Hotel Parashar Check Inn</span></h1>
             <div className="w-20 h-2 bg-green-700 my-4"></div>
-            <p className="text-xl mb-10"> where comfort meets elegance in the heart of nagpur . Our hotel offers a perfect blend of mordern amenities and warm hospitality for both business and leisure travelers . Guest can enjoy well-appointed rooms with luxurious bedding , complimentary Wi-Fi , flate-screen TVs, and 24- hour room service.</p>
+            <p className="text-xl mb-10"> where comfort meets elegance in the heart of nagpur . Our hotel offers a perfect blend of mordern amenities and warm hospitality for both business and leisure travelers . Guest can enjoy well-appointed rooms with luxurious bedding , complimentary Wi-Fi , flat-screen TVs, and 24- hour room service.
+              Location is good as it is in a walkable distance Near Railway station.
+            </p>
           </div>
         </header>
       </div>
@@ -360,7 +356,7 @@ const HotelCheckInn = () => {
                       <div className="mb-6">
                         <h3 className="font-semibold text-lg mb-3">Facilities</h3>
                         <div className="grid grid-cols-2 gap-3">
-                          {facilities.slice(0, 6).map((facility, index) => (
+                          {facilities.slice(0, 8).map((facility, index) => (
                             <div key={index} className="flex items-center gap-2">
                               <div className="text-primary">{facility.icon}</div>
                               <span className="text-gray-700">{facility.name}</span>
@@ -462,20 +458,17 @@ Same day - service - Available upon request for an additional charge
             <div
                 className="bg-[#f9b800] flex justify-center items-center w-28 h-28 rounded-full absolute mx-auto right-0 left-0 -inset-y-14 border-4 border-slate-200 group-hover:border-primary dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-[#f9b800] group-hover:shadow-md transform duration-300">
                 <span className="text-3xl md:text-5xl text-white dark:text-slate-800 group-hover:text-[#f9b800] dark:group-hover:text-white transform duration-300">
-                    <img src="https://cdn-icons-png.flaticon.com/128/2084/2084174.png" className="h-14"/>
+                    <img src="https://cdn-icons-png.flaticon.com/128/5159/5159863.png" className="h-14"/>
                 </span>
             </div>
             <div className="flex flex-col items-center justify-center absolute mx-auto inset-0 p-4">
                 <div>
                     <h2 className="text-xl text-center capitalize font-bold text-black dark:text-slate-800 my-4">
-                      Wider Doorways For Wheelchair Access
+                      Room service
                     </h2>
                 </div>
                 <div>
-                    <p className="text-center text-base dark:text-white">
-Visual and audible emergency alarms .
-Wheelchair - accessible restrooms in lobby and common areas .
-                    </p>
+                    <p className="text-center text-base dark:text-white">We ensure your stay is as comfortable as possible. Whether you’re craving a delicious meal or a refreshing beverage, our dedicated team is just a call away—ready to deliver right to your door.          </p>
                 </div>
                 
             </div>
@@ -487,7 +480,6 @@ Wheelchair - accessible restrooms in lobby and common areas .
     <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
         <div className="max-w-2xl lg:max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-extrabold text-gray-900">Visit Our Location</h2>
-            <p className="mt-4 text-lg text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div className="mt-16 lg:mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -499,7 +491,7 @@ Wheelchair - accessible restrooms in lobby and common areas .
                 <div>
                     <div className="max-w-full mx-auto rounded-lg overflow-hidden">
                         <div className="px-6 py-4">
-                            <h3 className="text-lg font-medium text-gray-900">HOTEL PARASHAR PALM Address 🌴 </h3>
+                            <h3 className="text-lg font-medium text-gray-900">Hotel Parashar Check Inn</h3>
                             <p className="mt-1 text-gray-600"> Near Railway Station, P.K.Salve Road, Mohan Nagar, Nagpur-440001, MAHARASHTRA, INDIA</p>
                         </div>
                         <div className="border-t border-gray-200 px-6 py-4">

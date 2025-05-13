@@ -48,8 +48,8 @@ export default function Footer() {
         <h3 className="text-xl font-semibold mb-4 text-muted">Quick Links</h3>
         <ul className="space-y-2">
           {[{ name: "Home", href: "/" }, { name: "About Us", href: "/about" }, { name: "Services", href: "/services" },
-          { name: "Contact", href: "/contact" }, { name: "Privacy Policy", href: "privacy" },
-          { name: "Terms of Service", href: "/terms" }].map((link, index) => (
+          { name: "Contact", href: "/contact" }, { name: "Terms & Conditions", href: "/terms-conditions" },{ name: "Privacy Policy", href: "/privacy-policy" },
+          { name: "Hotel Rules & Regulations", href: "/hotel-rules-regulations" }].map((link, index) => (
             <li key={index}>
               <Link href={link.href} className="hover:text-primary transition-colors duration-300">
                 {link.name}

@@ -9,7 +9,7 @@ import cozyCabin3 from "../../../public/images/cozy-cabin3.jpeg";
 import cozyCabin4 from "../../../public/images/cozy-cabin4.jpg";
 import Image from 'next/image';
 import { FiWifi, FiX } from "react-icons/fi";
-import { MdPool, MdFreeBreakfast, MdDinnerDining, MdNaturePeople, MdEco, MdLocationOn, MdWash, MdLocalHospital } from "react-icons/md";
+import { MdPool, MdFreeBreakfast, MdDinnerDining, MdNaturePeople, MdEco, MdLocationOn, MdWash, MdLocalHospital, MdTv, MdOutlineBathroom } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaParking, FaConciergeBell, FaHandsHelping, FaTag, FaBed, FaStar, FaHeart, FaLeaf, FaLightbulb } from "react-icons/fa"
 
@@ -56,58 +56,42 @@ const HotelMax = () => {
         },
         {
           name: "Flat Screen TV's",
-          icon: <MdNaturePeople size={30} className="text-primary mb-2" />,
+          icon: <MdTv size={30} className="text-primary mb-2" />,
+        },
+        {
+          name: "Attached Bathroom",
+          icon: <MdOutlineBathroom size={30} className="text-primary mb-2" />,
         },
       ];
     
     const roomType = [
        {
-        name: "Premium AC",
+        name: "Premium",
         img: cozyCabin2,
         type: "premium",
         bed: "Comfortable Bed with Balcony View",
-        availability: 9,
-        price: "2200/ + 12% GST",
+        availability: 13,
+        price: "1800/ + GST",
         description: "Enjoy peaceful moments by the fire in this cozy cabin ideal for romantic getaways."
       },
       {
-        name: "Deluxe AC",
+        name: "Deluxe",
         img: cozyCabin1,
         type: "deluxe",
         bed: "Comfortable Bed with Balcony View",
-        availability: 4,
-        price: "2000/ + 12% GST",
+        availability: 13,
+        price: "1500/ + GST",
         description: "A luxurious escape nestled in the forest, featuring a balcony with breathtaking views."
-      },
-      {
-        name: "Non AC",
-        img: cozyCabin3,
-        type: "nonac",
-        bed: "Comfortable Bed with Balcony View",
-        availability: 2,
-        price: "1200/ + 12% GST",
-        description: "Enjoy peaceful moments by the fire in this cozy cabin ideal for romantic getaways."
-      },
-      {
-        name: "Dormitory",
-        img: cozyCabin4,
-        type: "dormitory",
-        bed: "Comfortable Bed with Balcony View",
-        availability: 7,
-        price: "500/ + 12% GST",
-        description: "Enjoy peaceful moments by the fire in this cozy cabin ideal for romantic getaways."
-      },
+      }
     ];
    
   const filteredRooms = activeTab === "all" ? roomType : roomType.filter(room => room.type === activeTab);
 
   const tabs = [
     { label: "All", value: "all" },
-    { label: "Premium AC", value: "premium" },
-    { label: "Deluxe Ac", value: "deluxe" },
-    { label: "Non-AC", value: "nonac" },
-    { label: "Dormitory", value: "dormitory" },  
-  ];
+    { label: "Premium", value: "premium" },
+    { label: "Deluxe", value: "deluxe" },
+    ];
     const fadeIn = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.8, ease: "easeOut" } }
@@ -169,7 +153,7 @@ const HotelMax = () => {
       transition={{ duration: 0.8 }}
       className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
     >
-      Hotel Parashar Palm
+      Hotel Parashar Max
     </motion.h1>
 
   </div>
@@ -187,7 +171,7 @@ const HotelMax = () => {
             <div className="justify-center mx-auto h-full sm:p-10">
                 <header className=" px-4 lg:flex items-center h-full pt-4 lg:pt-0">
           <div className="w-full">
-            <h1 className="text-4xl lg:text-4xl font-bold">welcome to Hotel Parashar  <span className="text-green-700">Palm</span> 🌴</h1>
+            <h1 className="text-4xl lg:text-4xl font-bold">welcome to <span className="text-green-700">Hotel Parashar Max</span></h1>
             <div className="w-20 h-2 bg-green-700 my-4"></div>
             <p className="text-xl mb-10"> where comfort meets elegance in the heart of nagpur . Our hotel offers a perfect blend of mordern amenities and warm hospitality for both business and leisure travelers . Guest can enjoy well-appointed rooms with luxurious bedding , complimentary Wi-Fi , flate-screen TVs, and 24- hour room service.</p>
           </div>
@@ -239,7 +223,7 @@ const HotelMax = () => {
   
           <div className="lg:mx-5 lg:p-3">
             <div className="mb-6">
-              <h1 className="text-4xl font-bold"><strong className="text-primary">Discover</strong> Hotel Parashar Palm 🌴</h1>
+              <h1 className="text-4xl font-bold"><strong className="text-primary">Discover</strong> Hotel Parashar Max</h1>
             </div>
   
             {/* Tabs */}
@@ -360,7 +344,7 @@ const HotelMax = () => {
                       <div className="mb-6">
                         <h3 className="font-semibold text-lg mb-3">Facilities</h3>
                         <div className="grid grid-cols-2 gap-3">
-                          {facilities.slice(0, 6).map((facility, index) => (
+                          {facilities.slice(0, 8).map((facility, index) => (
                             <div key={index} className="flex items-center gap-2">
                               <div className="text-primary">{facility.icon}</div>
                               <span className="text-gray-700">{facility.name}</span>
@@ -458,24 +442,22 @@ Same day - service - Available upon request for an additional charge
                 
             </div>
         </div>
+        
         <div  className="group w-64 h-80 bg-white dark:bg-[#f9b800] shadow-md relative rounded-lg  mx-4 my-7 hover:ring hover:ring-primary dark:hover:ring-white transform duration-500 hover:scale-105 hover:shadow-xl">
             <div
                 className="bg-[#f9b800] flex justify-center items-center w-28 h-28 rounded-full absolute mx-auto right-0 left-0 -inset-y-14 border-4 border-slate-200 group-hover:border-primary dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-[#f9b800] group-hover:shadow-md transform duration-300">
                 <span className="text-3xl md:text-5xl text-white dark:text-slate-800 group-hover:text-[#f9b800] dark:group-hover:text-white transform duration-300">
-                    <img src="https://cdn-icons-png.flaticon.com/128/2084/2084174.png" className="h-14"/>
+                    <img src="https://cdn-icons-png.flaticon.com/128/5159/5159863.png" className="h-14"/>
                 </span>
             </div>
             <div className="flex flex-col items-center justify-center absolute mx-auto inset-0 p-4">
                 <div>
                     <h2 className="text-xl text-center capitalize font-bold text-black dark:text-slate-800 my-4">
-                      Wider Doorways For Wheelchair Access
+                      Room service
                     </h2>
                 </div>
                 <div>
-                    <p className="text-center text-base dark:text-white">
-Visual and audible emergency alarms .
-Wheelchair - accessible restrooms in lobby and common areas .
-                    </p>
+                    <p className="text-center text-base dark:text-white">We ensure your stay is as comfortable as possible. Whether you’re craving a delicious meal or a refreshing beverage, our dedicated team is just a call away—ready to deliver right to your door.          </p>
                 </div>
                 
             </div>
@@ -499,19 +481,17 @@ Wheelchair - accessible restrooms in lobby and common areas .
                 <div>
                     <div className="max-w-full mx-auto rounded-lg overflow-hidden">
                         <div className="px-6 py-4">
-                            <h3 className="text-lg font-medium text-gray-900">HOTEL PARASHAR PALM Address 🌴 </h3>
-                            <p className="mt-1 text-gray-600"> PLOT 131, BEHIND CIIMS HOSPITAL, GATE NO 3, BAJAJ NAGAR, NAGPUR - 440010, MAHARASHTRA, INDIA</p>
+                            <h3 className="text-lg font-medium text-gray-900">HOTEL PARASHAR MAX </h3>
+                            <p className="mt-1 text-gray-600"> Plot No. 17, Lumbini Nagar, Opposite Max Hospital, Old Mankapur, Nagpur-440030, Maharashtra, India</p>
                         </div>
                         <div className="border-t border-gray-200 px-6 py-4">
                             <h3 className="text-lg font-medium text-gray-900">Hours</h3>
-                            <p className="mt-1 text-gray-600">Monday - Friday: 9am - 5pm</p>
-                            <p className="mt-1 text-gray-600">Saturday: 10am - 4pm</p>
-                            <p className="mt-1 text-gray-600">Sunday: Closed</p>
+                            <p className="mt-1 text-gray-600">24/7 Hours</p>
                         </div>
                         <div className="border-t border-gray-200 px-6 py-4">
                             <h3 className="text-lg font-medium text-gray-900">Contact</h3>
-                            <p className="mt-1 text-gray-600">Email: hotelparasharpalm@gmail.com</p>
-                            <p className="mt-1 text-gray-600">Phone: +91 9322823328 </p>
+                            <p className="mt-1 text-gray-600">Email: hotelparasharmax@gmail.com</p>
+                            <p className="mt-1 text-gray-600">Phone: +91 8421600787 </p>
                         </div>
                     </div>
                 </div>
