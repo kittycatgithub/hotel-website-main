@@ -93,24 +93,24 @@ export default function Home() {
       price: "₹1800",
       description: "Enjoy peaceful moments by the fire in this cozy cabin ideal for romantic getaways."
     },
-    // {
-    //   name: "Panoromic Cozy Cabin",
-    //   img: cozyCabin3,
-    //   type: "cozy",
-    //   bed: "King Bed with Skylight Roof",
-    //   availability: 3,
-    //   price: "30,000 LKR",
-    //   description: "Fall asleep under the stars with skylight views from the comfort of your king bed."
-    // },
-    // {
-    //   name: "Elegant Cozy Cabin",
-    //   img: cozyCabin4,
-    //   type: "cozy",
-    //   bed: "Luxury Queen Bed with Garden Patio",
-    //   availability: 5,
-    //   price: "29,000 LKR",
-    //   description: "Step into elegance with a private garden patio perfect for relaxation and morning coffee."
-    // },
+    {
+      name: "Panoromic Cozy Cabin",
+      img: cozyCabin3,
+      type: "cozy",
+      bed: "King Bed with Skylight Roof",
+      availability: 3,
+      price: "30,000 LKR",
+      description: "Fall asleep under the stars with skylight views from the comfort of your king bed."
+    },
+    {
+      name: "Elegant Cozy Cabin",
+      img: cozyCabin4,
+      type: "cozy",
+      bed: "Luxury Queen Bed with Garden Patio",
+      availability: 5,
+      price: "29,000 LKR",
+      description: "Step into elegance with a private garden patio perfect for relaxation and morning coffee."
+    },
     // {
     //   name: "Luxury Cozy Cabin",
     //   img: cozyCabin1,
@@ -229,6 +229,8 @@ export default function Home() {
     { label: "All", value: "all" },
     { label: "Deluxe", value: "deluxe" },
     { label: "Premium", value: "premium" },
+    { label: "Skyline Suite", value: "skyline" },
+    { label: "Sunset Villa", value: "sunset" },
     // { label: "Skyline Suite", value: "skyline" },
     // { label: "Sunset Villa", value: "sunset" },
     // { label: "Garden View", value: "garden" },
@@ -470,16 +472,15 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
             }
           }
         }}
-        className="mx-5 py-12"
+        // className="mx-5 py-12"
       >
 
 
-        <div className="lg:mx-5 lg:p-3">
+        {/* <div className="lg:mx-5 lg:p-3">
           <div className="mb-6">
-            <h1 className="text-4xl font-bold"><strong className="text-primary">Discover</strong> Hotel Parashar</h1>
+            <h1 className="text-4xl font-bold"><strong className="text-primary">Explore</strong> Rooms Types</h1>
           </div>
 
-          {/* Tabs */}
           <div className="flex gap-3 mb-8 flex-wrap">
             {tabs.map(tab => (
               <button
@@ -496,7 +497,6 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
             ))}
           </div>
 
-          {/* Rooms */}
           <motion.div
             layout
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -518,7 +518,6 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
                     className="object-cover transition-all duration-500 group-hover:blur-sm"
                   />
               
-                  {/* Overlay content */}
                   <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center items-center text-white p-4 text-center">
                     <p className="text-sm mb-2">{room.bed}</p>
                     <p className="text-sm mb-2">Available : {room.availability} rooms</p>
@@ -532,7 +531,7 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        </div> */}
 
         
 
