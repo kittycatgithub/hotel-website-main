@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Parashar Group Of Hotels",
   description: "Best Hotel in Nagpur",
+  icons: {
+    icon: "/favicon.jpg", // can also use .png
+  },
 };
 
 export default function RootLayout({ children }) {
