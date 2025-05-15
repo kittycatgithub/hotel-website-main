@@ -11,7 +11,7 @@ export default function Footer() {
   {/* Background Image */}
   <div
     className="absolute inset-0 bg-cover bg-center opacity-100"
-    style={{ backgroundImage: "url('https://img.freepik.com/free-photo/luxurious-dinner-hall-with-large-crystal-chandelier_8353-565.jpg?t=st=1746688829~exp=1746692429~hmac=336f80c45a0f96794b1e00776bde7bf1648fcd9acb2301732700fe16d1a88be3&w=1380')" }}
+    style={{ backgroundImage: "url('./slider/footer.jpg')" }}
   ></div>
 
   {/* Overlay for darker tint if needed */}

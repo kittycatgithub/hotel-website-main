@@ -43,7 +43,7 @@ const HeroSlider = () => {
     <SwiperSlide>
         <section className="mx-auto bg-white  max-w-[1440px] min-w-[280px] ">
             <div className="relative isolate flex flex-col justify-end overflow-hidden px-8 pb-8 lg:py-10 text-white mx-auto">
-  <img src="https://img.freepik.com/free-photo/modern-apartment-architecture_1268-14696.jpg?t=st=1746870941~exp=1746874541~hmac=ac86808a9c5a2a0a1234d01bdc39ff71d172db41b628568a408bc450d6a3726a&w=1380" alt="University of Southern California" className="absolute inset-0 h-full w-full object-cover"/>
+  <img src="./slider/slider1.jpg" alt="University of Southern California" className="absolute inset-0 h-full w-full object-cover"/>
   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
   <div
     className="w-full z-10  flex flex-col lg:flex-row  items-center  py-12 sm:py-9 md:py-11 lg:py-40  px-2  sm:px-4 md:px-8 xl:px-16">
@@ -78,7 +78,7 @@ Hotel Parashar Max welcomes you to a world of comfort, elegance, and unmatched s
         <section className="mx-auto bg-white  max-w-[1440px] min-w-[280px] ">
             <div className="relative isolate flex flex-col justify-end overflow-hidden px-8 pb-8 lg:py-10 text-white mx-auto">
   {/* <img src="https://img.freepik.com/free-photo/luxury-hotel-reception-hall-lounge-restaurant-with-high-ceiling_105762-1771.jpg?t=st=1746882066~exp=1746885666~hmac=c07bd76b8d8def4aebc12ff730d087e876a7881f7a14bc2b4df52e47d7adca50&w=1380" alt="University of Southern California" className="absolute inset-0 h-full w-full object-cover"/> */}
-  <img src="https://img.freepik.com/free-photo/luxury-hotel-reception-hall-lounge-restaurant-with-high-ceiling_105762-1771.jpg?t=st=1747033518~exp=1747037118~hmac=56cd37052f9d8fa9491409e5521f4339b65327ad06355ef4a2c01f06ab15d401&w=1380" alt="University of Southern California" className="absolute inset-0 h-full w-full object-cover"/>
+  <img src="./slider/slider2.jpg" alt="University of Southern California" className="absolute inset-0 h-full w-full object-cover"/>
   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
   <div
     className="w-full z-10  flex flex-col lg:flex-row  items-center  py-12 sm:py-9 md:py-11 lg:py-40  px-2  sm:px-4 md:px-8 xl:px-16">
@@ -111,7 +111,7 @@ From vibrant metros to serene escapes, Parashar Max<br/> hotels are always where
     <SwiperSlide>
         <section className="mx-auto bg-white  max-w-[1440px] min-w-[280px] ">
             <div className="relative isolate flex flex-col justify-end overflow-hidden px-8 pb-8 lg:py-10 text-white mx-auto">
-  <img src="https://img.freepik.com/free-photo/hotel-room-interior-with-bedroom-area-living-space-kitchen_1262-12288.jpg?t=st=1746870049~exp=1746873649~hmac=b4c0d7ec0e1857399f4a65911a88f0ba0cce328bb74491a27444d905a3232fb4&w=1380" alt="University of Southern California" className="absolute inset-0 h-full w-full object-cover"/>
+  <img src="./slider/slider3.jpg" alt="University of Southern California" className="absolute inset-0 h-full w-full object-cover"/>
   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
   <div
     className="w-full z-10  flex flex-col lg:flex-row  items-center  py-12 sm:py-9 md:py-11 lg:py-40  px-2  sm:px-4 md:px-8 xl:px-16">
