@@ -199,7 +199,7 @@ const HotelMax = () => {
   return (
     <div>
     <div className="relative w-full h-[10vh] min-h-[250px]">
-     <img src="https://img.freepik.com/free-psd/classic-ballroom-award-ceremony-generative-ai_587448-2237.jpg?t=st=1746687491~exp=1746691091~hmac=8e377c379785013806bd49dc224c3aca89c48e3832c15f296e9cae5c1f19dca9&w=1380" alt="Background Image" className="object-cover object-center w-full h-full" />
+     <img src="/images/panoramic.jpg" alt="Background Image" className="object-cover object-center w-full h-full" />
 
   <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center px-4 text-center">
     <motion.h1 
@@ -505,8 +505,8 @@ const HotelMax = () => {
    
          <div className="relative -ml-2 overflow-hidden">
     <div className="absolute inset-0">
-      <img src="https://img.freepik.com/free-photo/luxury-bedroom-suite-resort-high-rise-hotel-with-working-table_105762-1783.jpg?uid=R159003840&ga=GA1.1.367398006.1746862920&semt=ais_hybrid&w=740" alt="Background Image" className="object-cover object-center w-full h-full" />
-      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <img src="/images/service-facilities.jpg" alt="Background Image" className="object-cover object-center w-full h-full" />
+      <div className="absolute inset-0 bg-black opacity-70"></div>
     </div>
     
     <div className="relative z-10 flex flex-col justify-center items-center h-full text-center pt-12">
@@ -520,7 +520,7 @@ const HotelMax = () => {
             <div
                 className="bg-[#f9b800] flex justify-center items-center w-28 h-28 rounded-full absolute mx-auto right-0 left-0 -inset-y-14 border-4 border-slate-200 group-hover:border-primary dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-[#f9b800] group-hover:shadow-md transform duration-300">
                 <span className="text-3xl md:text-5xl text-white dark:text-slate-800 group-hover:text-[#f9b800] dark:group-hover:text-white transform duration-300">
-                <img src="https://cdn-icons-png.flaticon.com/128/2515/2515183.png" className="h-14"/>
+                <img src="/images/icons/salad.png" className="h-14"/>
                 </span>
             </div>
             <div className="flex flex-col items-center text-center justify-center absolute mx-auto inset-0 p-4">
@@ -540,7 +540,7 @@ Buffet & À la carte options - start your day with a hearty breakfast buffet , o
             <div
                 className="bg-[#f9b800] flex justify-center items-center w-28 h-28 rounded-full absolute mx-auto right-0 left-0 -inset-y-14 border-4 border-slate-200 group-hover:border-primary dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-[#f9b800] group-hover:shadow-md transform duration-300">
                 <span className="text-3xl md:text-5xl text-white dark:text-slate-800 group-hover:text-[#f9b800] dark:group-hover:text-white transform duration-300">
-                <img src="https://cdn-icons-png.flaticon.com/128/3322/3322056.png" className="h-14"/>
+                <img src="/images/icons/laundry-machine.png" className="h-14"/>
                 </span>
             </div>
             <div className="flex flex-col items-center justify-center absolute mx-auto inset-0 p-4">
@@ -560,7 +560,7 @@ Same day - service - Available upon request for an additional charge
             <div
                 className="bg-[#f9b800] flex justify-center items-center w-28 h-28 rounded-full absolute mx-auto right-0 left-0 -inset-y-14 border-4 border-slate-200 group-hover:border-primary dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-[#f9b800] group-hover:shadow-md transform duration-300">
                 <span className="text-3xl md:text-5xl text-white dark:text-slate-800 group-hover:text-[#f9b800] dark:group-hover:text-white transform duration-300">
-                <img src="https://cdn-icons-png.flaticon.com/128/3420/3420275.png" className="h-14"/>
+                <img src="/images/icons/parking-car.png" className="h-14"/>
                 </span>
             </div>
             <div className="flex flex-col items-center justify-center absolute mx-auto inset-0 p-4">
@@ -580,7 +580,7 @@ Same day - service - Available upon request for an additional charge
             <div
                 className="bg-[#f9b800] flex justify-center items-center w-28 h-28 rounded-full absolute mx-auto right-0 left-0 -inset-y-14 border-4 border-slate-200 group-hover:border-primary dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-[#f9b800] group-hover:shadow-md transform duration-300">
                 <span className="text-3xl md:text-5xl text-white dark:text-slate-800 group-hover:text-[#f9b800] dark:group-hover:text-white transform duration-300">
-                    <img src="https://cdn-icons-png.flaticon.com/128/5159/5159863.png" className="h-14"/>
+                    <img src="/images/icons/room-service.png" className="h-14"/>
                 </span>
             </div>
             <div className="flex flex-col items-center justify-center absolute mx-auto inset-0 p-4">
@@ -648,7 +648,7 @@ Same day - service - Available upon request for an additional charge
                         <span>
                             View More
                         </span>
-                        <svg className="w-4 h-6 ml-2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        <svg className="w-4 h-6 ml-2" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                             viewBox="0 0 24 24">
                             <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>

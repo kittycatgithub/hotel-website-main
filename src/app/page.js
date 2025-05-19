@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import thumbnail from "../../public/images/thumbnail.png";
 import skyline1 from "../../public/images/Skyline-Suite1.jpg";
 import skyline2 from "../../public/images/skyline-suite2.jpg";
 import skyline3 from "../../public/images/skyline-suite3.jpg";
@@ -333,7 +332,7 @@ export default function Home() {
     {/* <!--   ✅ Product card 1 - Starts Here 👇 --> */}
     <div className="w-80 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <Link href="/hotel-max">
-            <img src="https://img.freepik.com/free-photo/modern-apartment-architecture_1268-14696.jpg?ga=GA1.1.367398006.1746862920&semt=ais_hybrid&w=740"
+            <img src="/max/max1.jpeg"
                     alt="Product" className="h-64 w-80 object-cover rounded-t-xl" />
             <div className="px-2.5 py-3 w-80">
                 <p className="text-lg font-bold text-black truncate block capitalize">Hotel Parashar max</p>
@@ -354,7 +353,7 @@ export default function Home() {
     {/* <!--   ✅ Product card 1 - Starts Here 👇 --> */}
     <div className="w-80 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <Link href="/hotel-check-inn">
-            <img src="https://img.freepik.com/free-photo/modern-apartment-architecture_1268-14696.jpg?ga=GA1.1.367398006.1746862920&semt=ais_hybrid&w=740"
+            <img src="/checkinn/img2.jpeg"
                     alt="Product" className="h-64 w-80 object-cover rounded-t-xl" />
             <div className="px-2.5 py-3 w-80">
                 <p className="text-lg font-bold text-black truncate block capitalize">Hotel Parashar Check Inn</p>
@@ -375,7 +374,7 @@ export default function Home() {
     {/* <!--   ✅ Product card 1 - Starts Here 👇 --> */}
     <div className="w-80 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <Link href="/hotel-palm">
-            <img src="https://img.freepik.com/free-photo/modern-apartment-architecture_1268-14696.jpg?ga=GA1.1.367398006.1746862920&semt=ais_hybrid&w=740"
+            <img src="/palm/img31.jpeg"
                     alt="Product" className="h-64 w-80 object-cover rounded-t-xl" />
             <div className="px-2.5 py-3 w-80">
                 <p className="text-lg font-bold text-black truncate block capitalize">Hotel Parashar Palm</p>
@@ -445,7 +444,7 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
         </div>
         
         <div className="relative h-64 md:h-full flex items-center justify-center">
-          <img src="https://img.freepik.com/free-photo/modern-studio-apartment-design-with-bedroom-living-space_1262-12375.jpg?ga=GA1.1.636005127.1746874507&semt=ais_hybrid&w=740"/>
+          <img src="/palm/img45.jpeg"/>
           </div>
       </div>
     </div>
@@ -645,7 +644,7 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
           <div
             className="flex items-center justify-center flex-shrink-0 w-16 h-16 transition-colors duration-200 rounded bg-green-50 group-hover:bg-green-100">
             <span className="text-4xl" role="img" aria-label="Productivity category">
-              <img src="https://cdn-icons-gif.flaticon.com/12525/12525059.gif"/>
+              <img src="/images/icons/air-conditioner.gif"/>
             </span>
           </div>
 
@@ -666,7 +665,7 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
           <div
             className="flex items-center justify-center flex-shrink-0 w-16 h-16 transition-colors duration-200 rounded bg-green-50 group-hover:bg-green-100">
             <span className="text-4xl" role="img" aria-label="Business category">
-            <img src="https://cdn-icons-gif.flaticon.com/12320/12320331.gif"/>
+            <img src="/images/icons/hotspot.gif"/>
             </span>
           </div>
 
@@ -687,7 +686,7 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
           <div
             className="flex items-center justify-center flex-shrink-0 w-16 h-16 transition-colors duration-200 rounded bg-green-50 group-hover:bg-green-100">
             <span className="text-4xl" role="img" aria-label="Content Generation category">
-            <img src="https://cdn-icons-gif.flaticon.com/18681/18681764.gif"/>
+            <img src="/images/icons/interpreter.gif"/>
             </span>
           </div>
 
@@ -708,7 +707,7 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
           <div
             className="flex items-center justify-center flex-shrink-0 w-16 h-16 transition-colors duration-200 rounded bg-green-50 group-hover:bg-green-100">
             <span className="text-4xl" role="img" aria-label="Developer Tools category">
-            <img src="https://cdn-icons-gif.flaticon.com/17695/17695854.gif"/>
+            <img src="/images/icons/bathroom.gif"/>
             </span>
           </div>
 
@@ -732,7 +731,7 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
           <div
             className="flex items-center justify-center flex-shrink-0 w-16 h-16 transition-colors duration-200 rounded bg-green-50 group-hover:bg-green-100">
             <span className="text-4xl" role="img" aria-label="Productivity category">
-              <img src="https://cdn-icons-gif.flaticon.com/13275/13275366.gif"/>
+              <img src="/images/icons/hand-washing.gif"/>
             </span>
           </div>
 
@@ -753,7 +752,7 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
           <div
             className="flex items-center justify-center flex-shrink-0 w-16 h-16 transition-colors duration-200 rounded bg-green-50 group-hover:bg-green-100">
             <span className="text-4xl" role="img" aria-label="Business category">
-            <img src="https://cdn-icons-gif.flaticon.com/15578/15578604.gif"/>
+            <img src="/images/icons/pasta.gif"/>
             </span>
           </div>
 
@@ -774,7 +773,7 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
           <div
             className="flex items-center justify-center flex-shrink-0 w-16 h-16 transition-colors duration-200 rounded bg-green-50 group-hover:bg-green-100">
             <span className="text-4xl" role="img" aria-label="Content Generation category">
-            <img src="https://cdn-icons-gif.flaticon.com/19004/19004706.gif"/>
+            <img src="/images/icons/reception.gif"/>
             </span>
           </div>
 
@@ -795,7 +794,7 @@ From bustling urban hubs to peaceful retreats, each Hotel Parashar location is c
           <div
             className="flex items-center justify-center flex-shrink-0 w-16 h-16 transition-colors duration-200 rounded bg-green-50 group-hover:bg-green-100">
             <span className="text-4xl" role="img" aria-label="Developer Tools category">
-            <img src="https://cdn-icons-gif.flaticon.com/18818/18818414.gif"/>
+            <img src="/images/icons/parking.gif"/>
             </span>
           </div>
 

@@ -77,7 +77,6 @@ Hotel Parashar Max welcomes you to a world of comfort, elegance, and unmatched s
     <SwiperSlide>
         <section className="mx-auto bg-white  max-w-[1440px] min-w-[280px] ">
             <div className="relative isolate flex flex-col justify-end overflow-hidden px-8 pb-8 lg:py-10 text-white mx-auto">
-  {/* <img src="https://img.freepik.com/free-photo/luxury-hotel-reception-hall-lounge-restaurant-with-high-ceiling_105762-1771.jpg?t=st=1746882066~exp=1746885666~hmac=c07bd76b8d8def4aebc12ff730d087e876a7881f7a14bc2b4df52e47d7adca50&w=1380" alt="University of Southern California" className="absolute inset-0 h-full w-full object-cover"/> */}
   <img src="./slider/slider2.jpg" alt="University of Southern California" className="absolute inset-0 h-full w-full object-cover"/>
   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
   <div

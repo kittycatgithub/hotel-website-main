@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { FaCheckCircle, FaHeart, FaLeaf, FaStar, FaLightbulb } from "react-icons/fa";
-import thumbnail from "../../../public/images/about-thumbnail.jpg";
 import vision from "../../../public/images/vision.gif";
 import mission from "../../../public/images/mission.gif";
+import img27 from "../../../public/palm/img27.jpeg"
 import Image from "next/image";
 import { useState } from "react";
 
@@ -68,7 +68,7 @@ export default function About() {
 
   return (<>
  <div className="relative w-full h-[10vh] min-h-[250px]">
-     <img src="https://img.freepik.com/free-psd/classic-ballroom-award-ceremony-generative-ai_587448-2237.jpg?t=st=1746687491~exp=1746691091~hmac=8e377c379785013806bd49dc224c3aca89c48e3832c15f296e9cae5c1f19dca9&w=1380" alt="Background Image" className="object-cover object-center w-full h-full" />
+     <img src="/images/panoramic.jpg" alt="Background Image" className="object-cover object-center w-full h-full" />
 
   <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center px-4 text-center">
     <motion.h1 
@@ -108,7 +108,7 @@ export default function About() {
               </p>
             </div>
             <Image
-              src={thumbnail}
+              src={img27}
               alt="Hotel lobby"
               width={600}
               height={400}

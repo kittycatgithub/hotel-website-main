@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import thumbnail from "../../../public/images/service-thumnail.jpg";
 import tour from "../../../public/images/yacht-tour.jpg";
 import vip from "../../../public/images/vip-expereince.jpg";
 import spa from "../../../public/images/spa-treat.png";
@@ -63,7 +62,7 @@ export default function Locations() {
     <div>
       {/* Hero Section */}
 <div className="relative w-full h-[10vh] min-h-[250px]">
-     <img src="https://img.freepik.com/free-psd/classic-ballroom-award-ceremony-generative-ai_587448-2237.jpg?t=st=1746687491~exp=1746691091~hmac=8e377c379785013806bd49dc224c3aca89c48e3832c15f296e9cae5c1f19dca9&w=1380" alt="Background Image" className="object-cover object-center w-full h-full" />
+     <img src="/images/service-facilities.jpg" alt="Background Image" className="object-cover object-center w-full h-full" />
 
   <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center px-4 text-center">
     <motion.h1 

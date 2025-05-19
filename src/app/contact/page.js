@@ -38,17 +38,8 @@ export default function Contact() {
   };
 
   return (<>
-  {/* <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-72 text-white overflow-hidden">
-  <div className="absolute inset-0">
-    <img src="https://img.freepik.com/free-psd/classic-ballroom-award-ceremony-generative-ai_587448-2237.jpg?t=st=1746687491~exp=1746691091~hmac=8e377c379785013806bd49dc224c3aca89c48e3832c15f296e9cae5c1f19dca9&w=1380" alt="Background Image" className="object-cover object-center w-full h-full" />
-    <div className="absolute inset-0 bg-black opacity-40"></div>
-  </div>
-  <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
-    <h1 className="text-5xl font-bold leading-tight mb-4">Contact Us</h1>
-  </div>
-</div> */}
 <div className="relative w-full h-[10vh] min-h-[250px]">
-     <img src="https://img.freepik.com/free-psd/classic-ballroom-award-ceremony-generative-ai_587448-2237.jpg?t=st=1746687491~exp=1746691091~hmac=8e377c379785013806bd49dc224c3aca89c48e3832c15f296e9cae5c1f19dca9&w=1380" alt="Background Image" className="object-cover object-center w-full h-full" />
+     <img src="/images/panoramic.jpg" alt="Background Image" className="object-cover object-center w-full h-full" />
 
   <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center px-4 text-center">
     <motion.h1 
