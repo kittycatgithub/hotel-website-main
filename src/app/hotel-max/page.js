@@ -6,7 +6,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import cozyCabin1 from "../../../public/images/Cozy-cabin1.png";
 import cozyCabin2 from "../../../public/images/cozy-cabin2.jpg";
 import cozyCabin3 from "../../../public/images/cozy-cabin3.jpeg";
-import cozyCabin4 from "../../../public/images/cozy-cabin4.jpg";
+import max1 from "../../../public/max/max1.jpeg";
+import max2 from "../../../public/max/max2.jpeg";
+import max3 from "../../../public/max/max3.jpeg";
+import max4 from "../../../public/max/max4.jpeg";
+import max5 from "../../../public/max/max5.jpeg";
+import max6 from "../../../public/max/max6.jpeg";
 import Image from 'next/image';
 import { FiWifi, FiX } from "react-icons/fi";
 import { MdPool, MdFreeBreakfast, MdDinnerDining, MdNaturePeople, MdEco, MdLocationOn, MdWash, MdLocalHospital, MdTv, MdOutlineBathroom } from "react-icons/md";
@@ -16,8 +21,11 @@ import { FaParking, FaConciergeBell, FaHandsHelping, FaTag, FaBed, FaStar, FaHea
 
 const HotelMax = () => {
   const [activeTab, setActiveTab] = useState("all");
+  const [activeTabGallery, setActiveTabGallery] = useState("all");
   const [selectedRoom, setSelectedRoom] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedRoomGallery, setSelectedRoomGallery] = useState(null);
+    const [isModalOpenGallery, setIsModalOpenGallery] = useState(false);
   
     const openModal = (room) => {
       setSelectedRoom(room);
@@ -27,6 +35,16 @@ const HotelMax = () => {
   
     const closeModal = () => {
       setIsModalOpen(false);
+      document.body.style.overflow = 'auto'; // Re-enable scrolling
+    };
+    const openModalGallery = (room) => {
+      setSelectedRoomGallery(room);
+      setIsModalOpenGallery(true);
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    };
+  
+    const closeModalGallery = () => {
+      setIsModalOpenGallery(false);
       document.body.style.overflow = 'auto'; // Re-enable scrolling
     };
      const facilities = [
@@ -84,14 +102,51 @@ const HotelMax = () => {
         description: "A luxurious escape nestled in the forest, featuring a balcony with breathtaking views."
       }
     ];
+    const roomTypeGallery = [
+       {
+        name: "Premium",
+        img: max1,
+        type: "all",
+      },
+       {
+        name: "Premium",
+        img: max2,
+        type: "all",
+      },
+       {
+        name: "Premium",
+        img: max3,
+        type: "all",
+      },
+       {
+        name: "Premium",
+        img: max4,
+        type: "all",
+      },
+       {
+        name: "Premium",
+        img: max5,
+        type: "all",
+      },
+       {
+        name: "Premium",
+        img: max6,
+        type: "all",
+      },
+    ];
    
   const filteredRooms = activeTab === "all" ? roomType : roomType.filter(room => room.type === activeTab);
+  const filteredRoomsGallery = activeTabGallery === "all" ? roomTypeGallery : roomTypeGallery.filter(room => room.type === activeTabGallery);
 
   const tabs = [
     { label: "All", value: "all" },
     { label: "Premium", value: "premium" },
     { label: "Deluxe", value: "deluxe" },
     ];
+  const gallerytabs = [
+    { label: "All", value: "all" },
+    ];
+
     const fadeIn = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.8, ease: "easeOut" } }
@@ -221,7 +276,7 @@ const HotelMax = () => {
         >
   
   
-          <div className="lg:mx-5 lg:p-3">
+          <div className=" max-w-6xl justify-between mx-auto lg:p-3">
             <div className="mb-6">
               <h1 className="text-4xl font-bold"><strong className="text-primary">Discover</strong> Hotel Parashar Max</h1>
             </div>
@@ -285,6 +340,84 @@ const HotelMax = () => {
   
           {/* Room Details Modal */}
           <AnimatePresence>
+            {isModalOpenGallery && selectedRoomGallery && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+                onClick={closeModalGallery}
+              >
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.8, opacity: 0 }}
+                  transition={{ type: "spring", damping: 25 }}
+                  className="relative bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <button
+                    onClick={closeModalGallery}
+                    className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/80 hover:bg-gray-100 transition-colors"
+                  >
+                    <FiX size={24} />
+                  </button>
+  
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Image Gallery */}
+                    <div className="relative h-64 lg:h-full">
+                      <Image
+                        src={selectedRoomGallery.img}
+                        alt={selectedRoomGallery.name}
+                        fill
+                        className="object-contain bg-black rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none"
+                      />
+                    </div>
+  
+                    {/* Room Details */}
+                    <div className="px-6 pb-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <p className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                          {selectedRoomGallery.availability} rooms available
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">
+                          Capacity: 2 guests / room
+                        </span>
+                        
+                      </div>
+  
+                      {/* <p className="text-gray-600 mb-6">{selectedRoom.description}</p> */}
+  
+                      <div className="mb-6">
+                        <h3 className="font-semibold text-lg mb-3">Facilities</h3>
+                        <div className="grid grid-cols-2 gap-3">
+                          {facilities.slice(0, 8).map((facility, index) => (
+                            <div key={index} className="flex items-center gap-2">
+                              <div className="text-primary">{facility.icon}</div>
+                              <span className="text-gray-700">{facility.name}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+  
+                      <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                        {/* <a href="/booking"><button className="flex-1 bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors font-medium">
+                          Book Now
+                        </button></a> */}
+                        <a href="/contact"><button className="flex-1 border border-primary text-primary py-3 px-6 rounded-lg hover:bg-primary/10 transition-colors font-medium">
+                          Contact Us
+                        </button></a>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          {/* Room Details Modal Gallery*/}
+          <AnimatePresence>
             {isModalOpen && selectedRoom && (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -315,7 +448,7 @@ const HotelMax = () => {
                         src={selectedRoom.img}
                         alt={selectedRoom.name}
                         fill
-                        className="object-cover rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none"
+                        className="object-contain bg-black rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none"
                       />
                     </div>
   
@@ -383,7 +516,7 @@ const HotelMax = () => {
 
     <div className="  mx-auto p-6 lg:px-30 sm:px-8 bg-slate-200 dark:bg-slate-800">
     <div className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 gap-12 my-16">
-        <div className="group w-64 h-80 bg-white dark:bg-[#f9b800] shadow-md relative rounded-lg mx-4 my-7 hover:ring hover:ring-primary dark:hover:ring-white transform duration-500 hover:scale-105 hover:shadow-xl">
+        <div className="group w-64 h-80 bg-white shadow-md relative rounded-lg mx-4 my-7 hover:ring hover:ring-primary dark:hover:ring-white transform duration-500 hover:scale-105 hover:shadow-xl">
             <div
                 className="bg-[#f9b800] flex justify-center items-center w-28 h-28 rounded-full absolute mx-auto right-0 left-0 -inset-y-14 border-4 border-slate-200 group-hover:border-primary dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-[#f9b800] group-hover:shadow-md transform duration-300">
                 <span className="text-3xl md:text-5xl text-white dark:text-slate-800 group-hover:text-[#f9b800] dark:group-hover:text-white transform duration-300">
@@ -395,7 +528,7 @@ const HotelMax = () => {
                     <h2 className="text-xl capitalize font-bold text-black dark:text-slate-800 mt-10">In-House Dinning Availablity</h2>
                 </div>
                 <div>
-                    <p className="text-base dark:text-white">
+                    <p className="text-base">
 Room service - Available from 7:00 AM to 11:00 PM  with a special late-night menu upon request.
 Buffet & À la carte options - start your day with a hearty breakfast buffet , or choose from our à la carte lunch and dinner menus .
                     </p>
@@ -403,7 +536,7 @@ Buffet & À la carte options - start your day with a hearty breakfast buffet , o
                 
             </div>
         </div>
-        <div  className="group w-64 h-80 bg-white dark:bg-[#f9b800] shadow-md relative rounded-lg  mx-4 my-7 hover:ring hover:ring-primary dark:hover:ring-white transform duration-500 hover:scale-105 hover:shadow-xl">
+        <div  className="group w-64 h-80 bg-white shadow-md relative rounded-lg  mx-4 my-7 hover:ring hover:ring-primary dark:hover:ring-white transform duration-500 hover:scale-105 hover:shadow-xl">
             <div
                 className="bg-[#f9b800] flex justify-center items-center w-28 h-28 rounded-full absolute mx-auto right-0 left-0 -inset-y-14 border-4 border-slate-200 group-hover:border-primary dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-[#f9b800] group-hover:shadow-md transform duration-300">
                 <span className="text-3xl md:text-5xl text-white dark:text-slate-800 group-hover:text-[#f9b800] dark:group-hover:text-white transform duration-300">
@@ -415,7 +548,7 @@ Buffet & À la carte options - start your day with a hearty breakfast buffet , o
                     <h2 className="text-xl capitalize font-bold text-black dark:text-slate-800 my-4">Laundry</h2>
                 </div>
                 <div>
-                    <p className="text-center text-base dark:text-white">
+                    <p className="text-center text-base">
                       Service Hours - Available daily from 8:00 AM to 8:00 PM 
 Same day - service - Available upon request for an additional charge 
                     </p>
@@ -423,7 +556,7 @@ Same day - service - Available upon request for an additional charge
                 
             </div>
         </div>
-        <div className="group w-64 h-80 bg-white dark:bg-[#f9b800] shadow-md relative rounded-lg  mx-4 my-7 hover:ring hover:ring-primary dark:hover:ring-white transform duration-500 hover:scale-105 hover:shadow-xl">
+        <div className="group w-64 h-80 bg-white shadow-md relative rounded-lg  mx-4 my-7 hover:ring hover:ring-primary dark:hover:ring-white transform duration-500 hover:scale-105 hover:shadow-xl">
             <div
                 className="bg-[#f9b800] flex justify-center items-center w-28 h-28 rounded-full absolute mx-auto right-0 left-0 -inset-y-14 border-4 border-slate-200 group-hover:border-primary dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-[#f9b800] group-hover:shadow-md transform duration-300">
                 <span className="text-3xl md:text-5xl text-white dark:text-slate-800 group-hover:text-[#f9b800] dark:group-hover:text-white transform duration-300">
@@ -435,7 +568,7 @@ Same day - service - Available upon request for an additional charge
                     <h2 className="text-xl capitalize font-bold text-black dark:text-slate-800 my-4">parking availability </h2>
                 </div>
                 <div>
-                    <p className="text-center text-base dark:text-white">
+                    <p className="text-center text-base">
                      On-site parking available 24/7 for hotel guest , secured well-lit open air parking and complimentary for in-house guests 
                     </p>
                 </div>
@@ -443,7 +576,7 @@ Same day - service - Available upon request for an additional charge
             </div>
         </div>
         
-        <div  className="group w-64 h-80 bg-white dark:bg-[#f9b800] shadow-md relative rounded-lg  mx-4 my-7 hover:ring hover:ring-primary dark:hover:ring-white transform duration-500 hover:scale-105 hover:shadow-xl">
+        <div  className="group w-64 h-80 bg-white shadow-md relative rounded-lg  mx-4 my-7 hover:ring hover:ring-primary dark:hover:ring-white transform duration-500 hover:scale-105 hover:shadow-xl">
             <div
                 className="bg-[#f9b800] flex justify-center items-center w-28 h-28 rounded-full absolute mx-auto right-0 left-0 -inset-y-14 border-4 border-slate-200 group-hover:border-primary dark:border-slate-800 group-hover:bg-white dark:group-hover:bg-[#f9b800] group-hover:shadow-md transform duration-300">
                 <span className="text-3xl md:text-5xl text-white dark:text-slate-800 group-hover:text-[#f9b800] dark:group-hover:text-white transform duration-300">
@@ -457,7 +590,7 @@ Same day - service - Available upon request for an additional charge
                     </h2>
                 </div>
                 <div>
-                    <p className="text-center text-base dark:text-white">We ensure your stay is as comfortable as possible. Whether you’re craving a delicious meal or a refreshing beverage, our dedicated team is just a call away—ready to deliver right to your door.          </p>
+                    <p className="text-center text-base">We ensure your stay is as comfortable as possible. Whether you’re craving a delicious meal or a refreshing beverage, our dedicated team is just a call away—ready to deliver right to your door.          </p>
                 </div>
                 
             </div>
@@ -465,18 +598,77 @@ Same day - service - Available upon request for an additional charge
     </div>
 </div>
   </div>
+   <div className="lg:mx-5 p-3 py-12 md:px-0">
+            <div className="mb-6">
+              <h1 className="text-4xl font-bold"><strong className="text-primary">Gallery</strong></h1>
+            </div>
+  
+            <div className="flex gap-3 mb-8 flex-wrap">
+              {gallerytabs.map(tab => (
+                <button
+                  key={tab.value}
+                  onClick={() => setActiveTabGallery(tab.value)}
+                  className={`px-4 py-2 rounded-full font-medium transition-all ${
+                    activeTab === tab.value
+                      ? "bg-primary text-white scale-105 shadow-lg"
+                      : "bg-gray-100 text-gray-800 hover:bg-primary/20"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+  
+            <motion.div
+              layout
+              className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6"
+            >
+              {filteredRoomsGallery.map((room, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: index * 0.1 }}
+                  className="relative group bg-primary overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
+                  onClick={() => openModalGallery(room)}
+                >
+                  <div className="relative w-full h-64 overflow-hidden">
+                    <Image
+                      src={room.img}
+                      alt={room.name}
+                      fill
+                      className="object-cover transition-all duration-500 group-hover:blur-sm"
+                    />
+                
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center items-center text-white p-4 text-center">
+                      {/* <p className="text-sm mb-2">{room.bed}</p>
+                      <p className="text-sm mb-2">Available : {room.availability} rooms</p>
+                      <p className="text-lg font-bold">{room.price} / Night</p> */}
+                      <button className="flex items-center text-white border border-white py-1 px-2 rounded inline-flex items-center">
+                        <span>
+                            View More
+                        </span>
+                        <svg className="w-4 h-6 ml-2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </button>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
   <section className="bg-gray-50">
     <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
         <div className="max-w-2xl lg:max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-extrabold text-gray-900">Visit Our Location</h2>
-            <p className="mt-4 text-lg text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div className="mt-16 lg:mt-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="rounded-lg overflow-hidden">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11672.945750644447!2d-122.42107853750231!3d37.7730507907087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858070cc2fbd55%3A0xa71491d736f62d5c!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1619524992238!5m2!1sen!2sus"
-                        width="100%" height="480" allowFullScreen="" loading="lazy"></iframe>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.143379150357!2d79.07341097508541!3d21.186462480502612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1000a675ac5%3A0x68462fd6f8aeab51!2sHotel%20Parashar%20Max!5e0!3m2!1sen!2sin!4v1747484362274!5m2!1sen!2sin" width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+
                 </div>
                 <div>
                     <div className="max-w-full mx-auto rounded-lg overflow-hidden">

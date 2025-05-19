@@ -45,9 +45,12 @@ export default function Navbar() {
       {/* Desktop View (visible from lg and up) */}
       <div className="relative group hidden lg:inline-block text-left">
         {/* Trigger */}
-        <Link href="/locations" className="inline-flex items-center font-medium text-black">
+        <p  className="inline-flex items-center font-medium text-black">
           Locations <ChevronDown className="ml-1 h-4 w-4" />
-        </Link>
+        </p>
+        {/* <Link href="/locations" className="inline-flex items-center font-medium text-black">
+          Locations <ChevronDown className="ml-1 h-4 w-4" />
+        </Link> */}
 
         {/* Dropdown */}
         <div className="absolute z-50 hidden group-hover:block w-[200px] md:-ml-2">

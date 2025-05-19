@@ -47,8 +47,7 @@ export default function Footer() {
       <div>
         <h3 className="text-xl font-semibold mb-4 text-muted">Quick Links</h3>
         <ul className="space-y-2">
-          {[{ name: "Home", href: "/" }, { name: "About Us", href: "/about" }, { name: "Services", href: "/services" },
-          { name: "Contact", href: "/contact" }, { name: "Terms & Conditions", href: "/terms-conditions" },{ name: "Privacy Policy", href: "/privacy-policy" },
+          {[{ name: "Home", href: "/" }, { name: "About Us", href: "/about" },{ name: "Contact", href: "/contact" }, { name: "Terms & Conditions", href: "/terms-conditions" },{ name: "Privacy Policy", href: "/privacy-policy" },
           { name: "Hotel Rules & Regulations", href: "/hotel-rules-regulations" }].map((link, index) => (
             <li key={index}>
               <Link href={link.href} className="hover:text-primary transition-colors duration-300">
@@ -62,7 +61,7 @@ export default function Footer() {
       <div>
         <h3 className="text-xl font-semibold mb-4 text-muted">Locations</h3>
         <ul className="space-y-2">
-          {[{ name: "Hotel Parashar max", href: "/locations/hotel-parashar-max" }, { name: "Hotel Parashar Check Inn", href: "/locations/hotel-parashar-check-inn" }, { name: "Hotel Parashar Palm", href: "/locations/hotel-parashar-palm" }
+          {[{ name: "Hotel Parashar max", href: "/hotel-max" }, { name: "Hotel Parashar Check Inn", href: "/hotel-check-inn" }, { name: "Hotel Parashar Palm", href: "/hotel-palm" }
           ].map((link, index) => (
             <li key={index}>
               <Link href={link.href} className="hover:text-primary transition-colors duration-300">
@@ -116,9 +115,9 @@ export default function Footer() {
     <div className="text-center p-4 text-sm">
       © {new Date().getFullYear()} Hotel Parashar Max. All rights reserved.
     </div>
-    <div className="text-center p-4 text-sm">
+    <a href="https://kstartechnology.in/ " className="text-center p-4 text-sm cursor-pointer hover:text-green-400">
       Designed & Developed By KStar Technology
-    </div>
+    </a>
     </div>
    
   </div>

@@ -204,7 +204,7 @@ export default function Contact() {
             </div>
 
             {/* Google Map */}
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden h-96">
+        {/* <div className="bg-white rounded-xl shadow-lg overflow-hidden h-96">
           <iframe
             src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyD54bF873M1u-qCLRVNkkyy3ELRUmDMxn0&q=6.9157525020652875, 79.87747317809244`}
             width="100%"
@@ -214,7 +214,7 @@ export default function Contact() {
             loading="lazy"
             title="Holi Stay, Colombo 08"
           ></iframe>
-        </div>
+        </div> */}
           </motion.div>
         </div>
 
@@ -236,27 +236,22 @@ export default function Contact() {
     {[
       { 
         question: 'What services do you offer?', 
-        answer: 'We specialize in luxury travel experiences including hotel bookings, vacation packages, and personalized itineraries. Our services cover everything from transportation to exclusive local experiences.',
+        answer: 'At Parashar Group Of Hotels, we offer a range of services designed to make your stay comfortable and memorable, including : Luxurious and well-maintained rooms, In-house multi-cuisine restaurant, 24/7 front desk and room service, Free Wi-Fi and parking, Conference/meeting facilities, Travel assistance and local tour guidance, Daily housekeeping and laundry service',
         icon: '🏨'
       },
       { 
         question: 'How can I book a service?', 
-        answer: 'You can book directly through our website, via our mobile app, or by contacting our 24/7 customer service team at +94 76 123 4567.',
+        answer: 'You can book a room or any of our services in the following ways: Phone Call or WhatsApp to our front desk team, Walk-in reservations at our reception desk (subject to availability)',
         icon: '📅'
       },
       { 
         question: 'What is your cancellation policy?', 
-        answer: 'Cancellations made 48+ hours before check-in receive full refunds. Within 48 hours, we offer 50% refund or rescheduling. No-shows are non-refundable.',
+        answer: 'Cancellation made at least 24 to 48 hours before the scheduled check-in date are eligible for a full refund. Cancellation made within 24 hours of check-in may incur a one-night stay charge.',
         icon: '🔄'
       },
       { 
-        question: 'Do you offer group discounts?', 
-        answer: 'Yes! Groups of 5+ rooms receive 10% off, and 10+ rooms get 15% off. Contact our group sales team for custom packages.',
-        icon: '👥'
-      },
-      { 
         question: 'What payment methods do you accept?', 
-        answer: 'We accept all major credit cards, bank transfers, and mobile payment solutions. Secure payment processing ensures your financial safety.',
+        answer: 'We accept a variety of payment options for your convenience: Cash, UPI (Google Pay, PhonePe, Paytm, etc.), Credit and Debit Cards (Visa, MasterCard, RuPay)',
         icon: '💳'
       },
     ].map((faq, index) => (
@@ -293,13 +288,13 @@ export default function Contact() {
             transition={{ duration: 0.2 }}
             className="px-4 pb-4"
           >
-            <div className="pl-9 text-gray-600 border-t pt-3 border-gray-100">
+            <div className="md:pl-9 text-gray-600 border-t pt-3 border-gray-100">
               <p>{faq.answer}</p>
-              {index === 2 && ( // Additional info for cancellation policy
+              {/* {index === 2 && ( // Additional info for cancellation policy
                 <button className="mt-2 text-sm text-primary hover:underline">
                   View full policy details
                 </button>
-              )}
+              )} */}
             </div>
           </motion.div>
         )}
@@ -309,7 +304,7 @@ export default function Contact() {
 </motion.div>
 
 {/* Office Hours Section - Improved */}
-<motion.div
+{/* <motion.div
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 0.5, delay: 0.6 }}
@@ -334,7 +329,7 @@ export default function Contact() {
       const currentHour = now.getHours();
       const isToday = 
         (item.day.includes(currentDay) || 
-        (item.day === 'Public Holidays' && /* holiday logic */ false))
+        (item.day === 'Public Holidays' && false))
       
       const isOpenNow = isToday && 
         (item.status === 'open' || item.status === 'limited') &&
@@ -384,7 +379,7 @@ export default function Contact() {
       </div>
     </div>
   </div>
-</motion.div>
+</motion.div> */}
 
       </div>
 
