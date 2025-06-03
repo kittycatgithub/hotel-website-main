@@ -17,6 +17,11 @@ import { FiWifi, FiX } from "react-icons/fi";
 import { MdPool, MdFreeBreakfast, MdDinnerDining, MdNaturePeople, MdEco, MdLocationOn, MdWash, MdLocalHospital, MdTv, MdOutlineBathroom } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaParking, FaConciergeBell, FaHandsHelping, FaTag, FaBed, FaStar, FaHeart, FaLeaf, FaLightbulb } from "react-icons/fa"
+import GalleryModal from '@/components/GalleryModal';
+import GalleryPreview from '@/components/GalleryPreview';
+
+
+const images = [max1, max2, max3, max4, max5, max6];
 
 
 const HotelMax = () => {
@@ -26,6 +31,8 @@ const HotelMax = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedRoomGallery, setSelectedRoomGallery] = useState(null);
     const [isModalOpenGallery, setIsModalOpenGallery] = useState(false);
+
+
   
     const openModal = (room) => {
       setSelectedRoom(room);
@@ -213,6 +220,7 @@ const HotelMax = () => {
 
   </div>
 </div>
+
 
        {/* Core Values Section */}
       <motion.div
@@ -598,67 +606,9 @@ Same day - service - Available upon request for an additional charge
     </div>
 </div>
   </div>
-   <div className="lg:mx-5 p-3 py-12 md:px-0">
-            <div className="mb-6">
-              <h1 className="text-4xl font-bold"><strong className="text-primary">Gallery</strong></h1>
-            </div>
-  
-            <div className="flex gap-3 mb-8 flex-wrap">
-              {gallerytabs.map(tab => (
-                <button
-                  key={tab.value}
-                  onClick={() => setActiveTabGallery(tab.value)}
-                  className={`px-4 py-2 rounded-full font-medium transition-all ${
-                    activeTab === tab.value
-                      ? "bg-primary text-white scale-105 shadow-lg"
-                      : "bg-gray-100 text-gray-800 hover:bg-primary/20"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-  
-            <motion.div
-              layout
-              className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6"
-            >
-              {filteredRoomsGallery.map((room, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.9, delay: index * 0.1 }}
-                  className="relative group bg-primary overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
-                  onClick={() => openModalGallery(room)}
-                >
-                  <div className="relative w-full h-64 overflow-hidden">
-                    <Image
-                      src={room.img}
-                      alt={room.name}
-                      fill
-                      className="object-cover transition-all duration-500 group-hover:blur-sm"
-                    />
-                
-                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-center items-center text-white p-4 text-center">
-                      {/* <p className="text-sm mb-2">{room.bed}</p>
-                      <p className="text-sm mb-2">Available : {room.availability} rooms</p>
-                      <p className="text-lg font-bold">{room.price} / Night</p> */}
-                      <button className="flex items-center text-white border border-white py-1 px-2 rounded inline-flex items-center">
-                        <span>
-                            View More
-                        </span>
-                        <svg className="w-4 h-6 ml-2" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                            viewBox="0 0 24 24">
-                            <path d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
-                    </button>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
+           
+            <div><GalleryModal images={images}/></div>
+
   <section className="bg-gray-50">
     <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
         <div className="max-w-2xl lg:max-w-4xl mx-auto text-center">
